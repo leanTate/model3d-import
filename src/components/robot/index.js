@@ -5,7 +5,7 @@ export default function Robot({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/robot_lean.gltf')
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} position={[1,-4,0]}>
       <group position={[-2.56, 6.64, -0.67]} rotation={[-Math.PI, 1.13, 3.07]} scale={[0.07, 0.1, 0.07]}>
         <primitive object={nodes.Bone001} />
         <skinnedMesh geometry={nodes.Cube003.geometry} material={materials['Material.008']} skeleton={nodes.Cube003.skeleton} />
